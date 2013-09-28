@@ -64,14 +64,6 @@ nav.pagination a:hover,
 <?php do_action( 'before' ); ?>
 
 	
-	
-<div id="page" class="snap-content">
-	
-	<a id="myToggleButton" class="btn btn-sidebar">
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </a>
 
 	<header id="masthead" class="site-header" role="banner">
 
@@ -85,4 +77,13 @@ nav.pagination a:hover,
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
+	
+	
+<div id="page" class="snap-content">
+	
+	<a id="myToggleButton" class="btn btn-sidebar">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </a>
 
