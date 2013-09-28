@@ -76,7 +76,7 @@ function licence_do_page() {
         </h2>
 
         <?php if (!$enter_licence): ?>
-			<iframe src="http://themeskult.dev/store/" width="100%" height="1000" ></iframe>        	
+			<iframe src="http://themeskult.com/store/" width="100%" height="1000" ></iframe>        	
         <?php endif ?>
 
 		<?php if ($enter_licence): ?>
