@@ -254,6 +254,7 @@ body {
 }
 article.post,
 article.page {
+  border-top: 1px solid #f1f1f1;
   padding: 50px 0;
   font-size: 18px;
   line-height: 30px;
@@ -261,8 +262,8 @@ article.page {
 }
 article.post h1,
 article.page h1 {
-  font-size: 40px;
-  line-height: 50px;
+  font-size: 30px;
+  line-height: 40px;
 }
 article.post p a,
 article.page p a {
