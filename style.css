@@ -8,6 +8,26 @@ Version: 1.4
 Licence: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 Description: Symbol is a tight, visually clean and well-structured theme that allows you to focus on reading.
 */
+/* General */
+a {
+  outline: none !important;
+}
+/* Alignment */
+.alignleft {
+  display: inline;
+  float: left;
+  margin-right: 1.5em;
+}
+.alignright {
+  display: inline;
+  float: right;
+  margin-left: 1.5em;
+}
+.aligncenter {
+  clear: both;
+  display: block;
+  margin: 0 auto;
+}
 /* Snap.js
 ----------------------------------------------- */
 .snap-content {
