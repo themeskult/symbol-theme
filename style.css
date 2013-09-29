@@ -146,14 +146,17 @@ blockquote {
 img {
   max-width: 100%;
 }
+#page {
+  border-top: 4px solid #feb83e;
+}
 /* =Header
 -------------------------------------------------------------- */
 header.site-header {
   background: #fff;
   position: fixed;
-  top: 0;
+  top: 4px;
   z-index: 10000;
-  right: 12%;
+  left: 820px;
   width: 150px;
 }
 header.site-header h1 {
@@ -254,7 +257,7 @@ body {
 }
 article.post,
 article.page {
-  border-top: 1px solid #f1f1f1;
+  border-bottom: 1px solid #ebebeb;
   padding: 50px 0;
   font-size: 18px;
   line-height: 30px;
