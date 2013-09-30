@@ -240,6 +240,9 @@ body {
 .site-main {
   position: relative;
 }
+.next-image {
+  float: right;
+}
 /* =Article
 -------------------------------------------------------------- */
 .site-navigation.post-navigation div div {
@@ -258,6 +261,7 @@ body {
   display: block;
 }
 article.post,
+article.attachment,
 article.page {
   border-bottom: 1px solid #ebebeb;
   padding: 50px 0;
@@ -266,51 +270,61 @@ article.page {
 /* Images */
 }
 article.post h1,
+article.attachment h1,
 article.page h1 {
   font-size: 30px;
   line-height: 40px;
 }
 article.post p a,
+article.attachment p a,
 article.page p a {
   color: #000;
   text-decoration: underline;
 }
 article.post p < code,
+article.attachment p < code,
 article.page p < code {
   width: 100%;
   display: none;
 }
 article.post code,
+article.attachment code,
 article.page code,
 article.post pre,
+article.attachment pre,
 article.page pre {
   border: none;
-  border: 1px solid #d2d2d2;
   background-color: #f8f8f8;
-  padding: 0 4px;
+  padding: 0 10px;
   font-size: 13px;
   width: auto;
   display: inline-block;
 }
 article.post code,
+article.attachment code,
 article.page code {
   border-radius: 4px;
 }
 article.post pre,
+article.attachment pre,
 article.page pre {
   padding: 20px 30px;
+  border: 1px solid #d2d2d2;
   display: block;
   border-left: none;
   border-right: none;
   overflow-x: scroll;
 }
 article.post blockquote p:last-child,
+article.attachment blockquote p:last-child,
 article.page blockquote p:last-child {
   margin-bottom: 0;
 }
 article.post p iframe,
+article.attachment p iframe,
 article.page p iframe,
 article.post p object,
+article.attachment p object,
 article.page p object {
   display: block;
   margin: 0;
@@ -319,10 +333,13 @@ article.page p object {
   float: none;
 }
 article.post img,
+article.attachment img,
 article.page img,
 article.post iframe,
+article.attachment iframe,
 article.page iframe,
 article.post object,
+article.attachment object,
 article.page object {
   display: block;
   margin: 0;
@@ -331,18 +348,22 @@ article.page object {
   float: none;
 }
 article.post p iframe,
+article.attachment p iframe,
 article.page p iframe,
 article.post p object,
+article.attachment p object,
 article.page p object {
   min-height: 250px;
   min-width: 0;
 }
 article.post img,
+article.attachment img,
 article.page img {
   height: auto;
   width: auto;
 }
 article.post .embed-container,
+article.attachment .embed-container,
 article.page .embed-container {
   position: relative;
   padding-bottom: 56.25%;
@@ -354,10 +375,13 @@ article.page .embed-container {
   margin-bottom: 30px;
 }
 article.post .embed-container iframe,
+article.attachment .embed-container iframe,
 article.page .embed-container iframe,
 article.post .embed-container object,
+article.attachment .embed-container object,
 article.page .embed-container object,
 article.post .embed-container embed,
+article.attachment .embed-container embed,
 article.page .embed-container embed {
   position: absolute;
   top: 0;
@@ -540,7 +564,7 @@ nav.paging-navigation .nav-next,
   padding: 0 0 24px 60px;
   position: relative;
 }
-.comments-area ol.commentlist li:last-child {
+.comments-area ol.commentlist li.comment:last-child {
   border-bottom: none;
   margin-bottom: 0;
 }

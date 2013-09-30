@@ -198,6 +198,8 @@ body.admin-bar header.site-header, body
 .site-main
 	position: relative;
 
+.next-image
+	float: right
 
 /* =Article
 -------------------------------------------------------------- */
@@ -208,7 +210,7 @@ body.admin-bar header.site-header, body
 .center-content, #disqus_thread
 	max-width: 580px; margin: 0 100px 0 140px; padding: 0 20px; display: block; 
 
-article.post, article.page
+article.post, article.attachment, article.page
 	border-bottom: 1px solid #ebebeb;
 	padding: 50px 0;
 	font-size: 18px;
@@ -224,9 +226,8 @@ article.post, article.page
 	
 	code,pre
 		border: none;
-		border: 1px solid #d2d2d2;
 		background-color: #f8f8f8;
-		padding: 0 4px;
+		padding: 0 10px;
 		font-size: 13px;
 		width: auto;
 		display: inline-block;
@@ -235,6 +236,7 @@ article.post, article.page
 		border-radius: 4px;
 	pre
 		padding: 20px 30px;
+		border: 1px solid #d2d2d2;
 		display: block;
 		border-left: none;
 		border-right: none;
@@ -377,7 +379,7 @@ nav.paging-navigation, #nav-below
 	ol.commentlist
 		list-style:none; margin:0; padding: 0; max-width: 500px; 
 		li.comment{border-bottom:1px solid #e7e7e7; line-height:24px;  margin:0 0 24px 0; padding:0 0 24px 60px; position:relative}
-		li:last-child{border-bottom:none; margin-bottom:0}
+		li.comment:last-child{border-bottom:none; margin-bottom:0}
 		.avatar{position:absolute; border-radius: 100px; top:4px; left:0}
 		.comment-author{font-weight: bold; font-size: 13px}
 		.comment-author cite{color:#000; font-style:normal; font-weight:bold}
