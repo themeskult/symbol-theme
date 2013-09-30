@@ -22,40 +22,8 @@
 <![endif]-->
 
 <?php
-	global $theme_options; 
-
-	$themename = get_option( 'stylesheet' );
-	$themename = preg_replace("/\W/", "_", strtolower($themename) );
-
-	$options = get_option ( $themename );
 	wp_head();
 ?>
-
-<style>
-article blockquote, 
-article .entry-content a:hover,
-article a:hover,
-.wrap nav a:hover, body
-{border-color: <?php echo $color ?> !important;}
-
-article h1 a:hover { color: <?php echo $color ?> !important}
-
-nav.pagination a:hover,
-#respond #submit, ::selection
-{background-color: <?php echo $color ?>;}
-
-<?php if($color): ?>
-	header.site-header h1.site-title a{background-color: <?php echo $color ?> !important;}
-<?php endif; ?>
-
-<?php if (get_header_image()): ?>
-	header.site-header h1.site-title a{background-image: url(<?php echo get_header_image() ?> )  !important;}
-<?php endif ?>
-
-<?php if (get_option('header_image')): ?>
-	header.site-header h1.site-title a{background-image: url(http://the-notepad.s3-website-us-east-1.amazonaws.com/header_images/<?php echo get_option('header_image') ?> )  !important;}
-<?php endif ?>
-</style>
 
 </head>
 

@@ -104,15 +104,75 @@ function symbol_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'symbol_scripts' );
-
-
 add_action('admin_head', 'load_theme_scripts');
 
+function of_stylesheet() {
 
+	global $theme_options;
+	$themename = get_option( 'stylesheet' );
+	$themename = preg_replace("/\W/", "_", strtolower($themename) );
+	$theme_options = get_option ($themename);
+
+	$color = $theme_options['site_color'];
+
+    ?>
+    <style type="text/css">
+	body{
+		color: <?php echo $theme_options['text_color']; ?>
+	}
+	h1,h2,h3,h4,h5,h6, h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+		color: <?php echo $theme_options['titles_color']; ?>
+	}
+	#page{
+		background-color: <?php echo $theme_options['background']['color'] ?>;
+		background-image: url(<?php echo $theme_options['background']['image'] ?>);
+		background-repeat: <?php echo $theme_options['background']['repeat'] ?>;
+		background-attachment: <?php echo $theme_options['background']['attachment'] ?>;
+	}
+
+	header.site-header h1 a {
+		background-image: url(<?php echo $theme_options['header_background_image'] ?>);
+	}
+
+	header.site-header nav {
+		background: <?php echo $theme_options['navigation_background_color'] ?>;
+	}
+
+	header.site-header nav ul li a{
+		color: <?php echo $theme_options['navigation_text_color'] ?>;
+	}
+
+	article blockquote, 
+	article .entry-content a:hover,
+	article a:hover,
+	.wrap nav a:hover, #page
+	{border-color: <?php echo $color ?>;}
+
+	article h1 a:hover { color: <?php echo $color ?>}
+
+	nav.pagination a:hover,
+	#respond #submit, ::selection
+	{background-color: <?php echo $color ?>;}
+
+	<?php if($color): ?>
+		header.site-header h1.site-title a{background-color: <?php echo $color ?>;}
+	<?php endif; ?>
+
+	<?php if (get_header_image()): ?>
+		header.site-header h1.site-title a{background-image: url(<?php echo get_header_image() ?> );}
+	<?php endif ?>
+
+    </style>
+    <?php
+}
 
 require( get_template_directory() . '/inc/plugins/nav-menu-images/nav-menu-images.php' );
 
 if (get_option('licence_symbol')) {
+
+
+	add_action( 'wp_head', 'of_stylesheet' );
+
 
 	// Re-define the options-framework URL
 	define( 'OPTIONS_FRAMEWORK_URL', get_template_directory_uri() . '/inc/options-framework/' );

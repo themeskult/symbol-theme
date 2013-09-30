@@ -116,7 +116,7 @@ a{ outline: none !important;}
 	display: block;
 	width: 44px;
 	height: 44px;
-	top: 20px;
+	top: 19px;
 	left: 20px;
 	position: fixed;
 	right: 20px;
@@ -150,13 +150,28 @@ img
 #page 
 	border-top: 4px solid #feb83e;
 
+footer.site-footer
+	padding: 20px;
+	font-size: 12px;
+	background: #f1f1f1;
+	text-align: center
+	a 
+		font-weight: bold
+
 /* =Header
 -------------------------------------------------------------- */
 header.site-header
 	background: #fff; position: fixed; top: 0px; z-index: 10000; left: 820px; width: 150px; 
 	h1 
 		margin: 0; padding: 0;
-		a{background: #feb83e url('images/logo.png') center no-repeat; border: 1px solid rgba(0,0,0,.1); border-top: 0; background-size: auto  70%; height: 150px; text-indent: -10000em; display: block;}
+		a
+			background: #feb83e url('images/logo.png') center no-repeat; 
+			border: 1px solid rgba(0,0,0,.1); 
+			border-top: 0; 
+			background-size: cover; 
+			height: 150px; 
+			text-indent: -10000em; 
+			display: block;
 	nav
 		display: block; 
 		width: 100%;  
@@ -166,33 +181,35 @@ header.site-header
 		ul 
 			margin: 0;
 			padding: 0;
-		a
-			border: 1px solid #ccc; 
-			overflow: hidden; 
-			border-top: 0; 
-			display: block; 
-			padding: 10px 10px; 
-			line-height: 18px; 
-			font-size: 11px; 
-			color: #333;
-			i, img{background: url('images/icon-page.png') center no-repeat; display: inline-block; opacity: .4; float: left; width: 18px; height: 18px;  margin: auto;}
-			img{display: block;}
+			li 
+				a
+					border: 1px solid #ccc; 
+					overflow: hidden; 
+					border-top: 0; 
+					display: block; 
+					padding: 10px 10px; 
+					line-height: 18px; 
+					font-size: 11px; 
+					color: #333;
+					i, img{background: url('images/icon-page.png') center no-repeat; display: inline-block; opacity: .4; float: left; width: 18px; height: 18px;  margin: auto;}
+					img{display: block;}
 
-			&.current_page_item
-				background: white; 
-			&:hover
-				background: #eee; 
-				span 
-					color: black;
-				i,img{opacity: 1;}
+					&:hover
+						background: #eee; 
+						span 
+							color: black;
+						i,img{opacity: 1;}
+
+				&.current_page_item a
+					background: white; 
 
 body.admin-bar header.site-header, body
 	border-top: 1px solid white;
 
 #begin, .site-navigation.post-navigation
 	border-bottom: 1px solid #ebebeb; padding: 32px 0;
-	a{color: #999;}
-	time{ color: #999; font-weight: bold; }
+	time
+		font-weight: bold; 
 
 
 .site-main
@@ -212,7 +229,7 @@ body.admin-bar header.site-header, body
 
 article.post, article.attachment, article.page
 	border-bottom: 1px solid #ebebeb;
-	padding: 50px 0;
+	padding: 30px 0 50px 0;
 	font-size: 18px;
 	line-height: 30px;
 	h1 
@@ -446,6 +463,10 @@ nav.paging-navigation, #nav-below
 					display: inline-block
 					a 
 						border: 0;
+						padding-left: 20px;
+						padding-right: 20px;
+						margin-right: 5px;
+						margin-left: 5px;
 
 	.center-content, #disqus_thread
 		margin-left: auto;

@@ -96,7 +96,7 @@ a {
   display: block;
   width: 44px;
   height: 44px;
-  top: 20px;
+  top: 19px;
   left: 20px;
   position: fixed;
   right: 20px;
@@ -149,6 +149,15 @@ img {
 #page {
   border-top: 4px solid #feb83e;
 }
+footer.site-footer {
+  padding: 20px;
+  font-size: 12px;
+  background: #f1f1f1;
+  text-align: center;
+}
+footer.site-footer a {
+  font-weight: bold;
+}
 /* =Header
 -------------------------------------------------------------- */
 header.site-header {
@@ -167,7 +176,7 @@ header.site-header h1 a {
   background: #feb83e url("images/logo.png") center no-repeat;
   border: 1px solid rgba(0,0,0,0.1);
   border-top: 0;
-  background-size: auto 70%;
+  background-size: cover;
   height: 150px;
   text-indent: -10000em;
   display: block;
@@ -183,7 +192,7 @@ header.site-header nav ul {
   margin: 0;
   padding: 0;
 }
-header.site-header nav a {
+header.site-header nav ul li a {
   border: 1px solid #ccc;
   overflow: hidden;
   border-top: 0;
@@ -193,8 +202,8 @@ header.site-header nav a {
   font-size: 11px;
   color: #333;
 }
-header.site-header nav a i,
-header.site-header nav a img {
+header.site-header nav ul li a i,
+header.site-header nav ul li a img {
   background: url("images/icon-page.png") center no-repeat;
   display: inline-block;
   opacity: 0.4;
@@ -203,21 +212,21 @@ header.site-header nav a img {
   height: 18px;
   margin: auto;
 }
-header.site-header nav a img {
+header.site-header nav ul li a img {
   display: block;
 }
-header.site-header nav a.current_page_item {
-  background: #fff;
-}
-header.site-header nav a:hover {
+header.site-header nav ul li a:hover {
   background: #eee;
 }
-header.site-header nav a:hover span {
+header.site-header nav ul li a:hover span {
   color: #000;
 }
-header.site-header nav a:hover i,
-header.site-header nav a:hover img {
+header.site-header nav ul li a:hover i,
+header.site-header nav ul li a:hover img {
   opacity: 1;
+}
+header.site-header nav ul li.current_page_item a {
+  background: #fff;
 }
 body.admin-bar header.site-header,
 body {
@@ -228,13 +237,8 @@ body {
   border-bottom: 1px solid #ebebeb;
   padding: 32px 0;
 }
-#begin a,
-.site-navigation.post-navigation a {
-  color: #999;
-}
 #begin time,
 .site-navigation.post-navigation time {
-  color: #999;
   font-weight: bold;
 }
 .site-main {
@@ -264,7 +268,7 @@ article.post,
 article.attachment,
 article.page {
   border-bottom: 1px solid #ebebeb;
-  padding: 50px 0;
+  padding: 30px 0 50px 0;
   font-size: 18px;
   line-height: 30px;
 /* Images */
@@ -773,6 +777,10 @@ nav.paging-navigation .nav-next,
   }
   header.site-header nav ul li a {
     border: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5px;
+    margin-left: 5px;
   }
   .center-content,
   #disqus_thread {
