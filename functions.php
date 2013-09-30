@@ -166,13 +166,12 @@ function of_stylesheet() {
     <?php
 }
 
-require( get_template_directory() . '/inc/plugins/nav-menu-images/nav-menu-images.php' );
 
 if (get_option('licence_symbol')) {
 
-
 	add_action( 'wp_head', 'of_stylesheet' );
 
+	require( get_template_directory() . '/inc/plugins/nav-menu-images/nav-menu-images.php' );
 
 	// Re-define the options-framework URL
 	define( 'OPTIONS_FRAMEWORK_URL', get_template_directory_uri() . '/inc/options-framework/' );
