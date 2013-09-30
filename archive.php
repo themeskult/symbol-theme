@@ -15,8 +15,8 @@ get_header(); ?>
 
 			<?php if ( have_posts() ) : ?>
 
-				<header class="page-header center-content">
-					<h1 class="page-title">
+				<header id="begin">
+					<time class="center-content">
 						<?php
 							if ( is_category() ) {
 								printf( __( 'Category Archives: %s', 'symbol' ), '<span>' . single_cat_title( '', false ) . '</span>' );
@@ -50,7 +50,9 @@ get_header(); ?>
 
 							}
 						?>
-					</h1>
+					</time>
+
+
 					<?php
 						if ( is_category() ) {
 							// show an optional category description
