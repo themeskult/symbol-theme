@@ -92,16 +92,21 @@ a {
 /* =jQuery Pageslide
 -------------------------------------------------------------- */
 #myToggleButton {
-  background: #333 url("images/open.png") center center no-repeat;
   display: block;
-  width: 44px;
+  width: 24px;
   height: 44px;
-  top: 19px;
-  left: 20px;
+  top: 34px;
+  left: 30px;
   position: fixed;
   right: 20px;
   text-indent: -10000em;
   z-index: 10000;
+}
+#myToggleButton .icon-bar {
+  height: 3px;
+  margin-bottom: 3px;
+  background: #000;
+  display: block;
 }
 /* =General
 -------------------------------------------------------------- */
@@ -165,7 +170,7 @@ header.site-header {
   position: fixed;
   top: 0px;
   z-index: 10000;
-  left: 820px;
+  left: 80px;
   width: 150px;
 }
 header.site-header h1 {
@@ -176,7 +181,7 @@ header.site-header h1 a {
   background: #feb83e url("images/logo.png") center no-repeat;
   border: 1px solid rgba(0,0,0,0.1);
   border-top: 0;
-  background-size: 0 70%;
+  background-size: auto 70%;
   height: 150px;
   text-indent: -10000em;
   display: block;
@@ -260,7 +265,7 @@ body {
 .center-content,
 #disqus_thread {
   max-width: 580px;
-  margin: 0 100px 0 140px;
+  margin: 0 100px 0 260px;
   padding: 0 20px;
   display: block;
 }
