@@ -137,6 +137,7 @@ function optionsframework_options() {
 		'name' => __('Header Image', 'options_check'),
 		'desc' => __('This creates a full size uploader that previews the image.', 'options_check'),
 		'id' => 'header_background_image',
+		'std' => get_template_directory_uri() . '/images/logo.png',
 		'type' => 'upload');
 
 	$options[] = array(
