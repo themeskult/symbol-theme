@@ -165,9 +165,14 @@ footer.site-footer a {
 }
 /* =Header
 -------------------------------------------------------------- */
+.header-container {
+  width: 1160px;
+  margin: auto;
+  position: relative;
+}
 header.site-header {
   background: #fff;
-  position: fixed;
+  position: absolute;
   top: 0px;
   z-index: 10000;
   left: 80px;
@@ -265,7 +270,7 @@ body {
 .center-content,
 #disqus_thread {
   max-width: 580px;
-  margin: 0 100px 0 260px;
+  margin: 0 auto 0 auto;
   padding: 0 20px;
   display: block;
 }
@@ -769,7 +774,7 @@ nav.paging-navigation .nav-next,
 .comments-area .comment-notes {
   display: none;
 }
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1160px) {
   header.site-header {
     position: static;
     width: auto;
